@@ -15,7 +15,7 @@ import cleaner from '../assets/images/cleanser.jpg'
 import necklace from '../assets/images/necklace.jpeg'
 import wallet from '..//assets/images/wallet.jpg'
 import scraft from '..//assets/images/scraft.jpeg'
-import watch from '..//assets/images/Watch.jpg'
+import watch from '../assets/images/watch.jpg'
 
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContextValue';

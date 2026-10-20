@@ -1,13 +1,10 @@
 import React from 'react'
-import Header from '../Components/Header'
 import store from '..//assets/images/store.jpeg'
-import logo from '../assets/images/logo.png'
+import logo from '../assets/images/Logo.png'
 
 export const About = () => {
   return (
-    <>
-    <Header/>
-    <div className="bg-gray-50 text-gray-800 font-sans leading-relaxed mt-15">
+    <div className="bg-gray-50 text-gray-800 font-sans leading-relaxed pt-24">
       <div className="container mx-auto px-4 py-16">
         {/* Main Heading Section */}
         <div className="text-center mb-12">
@@ -65,8 +62,6 @@ export const About = () => {
       </div>
     </div>
 
-    
-    </>
   )
 }
 export default About
