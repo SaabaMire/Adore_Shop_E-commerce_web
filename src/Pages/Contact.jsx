@@ -21,8 +21,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-100 px-4 pb-12 pt-32">
-      <form onSubmit={handleSubmit} className="w-full max-w-md rounded-lg bg-white p-8 shadow-lg">
+    <div className="flex min-h-[calc(100vh-5rem)] items-center justify-center bg-gray-100 px-4 pb-12 pt-28 sm:pt-32">
+      <form onSubmit={handleSubmit} className="w-full max-w-md rounded-lg bg-white p-5 shadow-lg sm:p-8">
         <h1 className="mb-6 text-center text-2xl font-bold text-gray-800">Contact Us</h1>
 
         {submitted && (
@@ -79,7 +79,7 @@ const Contact = () => {
 
         <div className="mt-8 text-center text-gray-600">
           <p className="text-sm font-semibold">Or reach out directly:</p>
-          <p className="mt-2 text-2xl font-semibold text-gray-800">+252 (617) 144-703</p>
+          <p className="mt-2 break-words text-xl font-semibold text-gray-800 sm:text-2xl">+252 (617) 144-703</p>
         </div>
       </form>
     </div>

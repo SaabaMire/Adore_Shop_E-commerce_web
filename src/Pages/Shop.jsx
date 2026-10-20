@@ -40,10 +40,10 @@ const Shop = () => {
 return (
  <>
 
-<div className="h-[80px]" />
+<div className="h-20" aria-hidden="true" />
  
 <section
- className="relative w-full h-[270px]"style={{
+ className="relative h-[220px] w-full sm:h-[270px]" style={{
  backgroundImage: `url(${banner})`,
  backgroundSize: 'cover',
  backgroundPosition: 'center',
@@ -52,20 +52,20 @@ return (
  >
       
 
-<div className="relative z-10 ml-130">
- <h2 className="text-4xl font-bold mr-50 text-center pt-30 ">#Shop Now</h2>
- <p className="text-md text-center">Save more with coupons & up to 50% off to our special offers!</p>
+<div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4 text-center">
+ <h2 className="text-3xl font-bold sm:text-4xl">#Shop Now</h2>
+ <p className="mt-2 max-w-xl text-sm sm:text-base">Save more with coupons &amp; up to 50% off to our special offers!</p>
   </div>
 
  </section>
   <section id="clothing-section-detail" className="bg-gray-200 py-6 px-2 mb-12 w-full overflow-hidden ">
-   <div className="w-max mx-auto">
-     <h2 className="text-3xl font-bold text-gray-800 mb-4 text-center">Our Latest Clothing Collection</h2>
+   <div className="mx-auto w-full max-w-7xl px-2 sm:px-4">
+     <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 sm:text-3xl">Our Latest Clothing Collection</h2>
  
-     <div className="flex gap-6">
+     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
      <Link to="/product/1">
-  <div className="w-[280px] bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
-    <img src={dress} alt="Elegant Dress" className="rounded-md mb-3 transition-transform duration-300 hover:scale-105 h-77" />
+  <div className="w-full min-w-0 bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+    <img src={dress} alt="Elegant Dress" className="mb-3 h-64 w-full rounded-md object-cover transition-transform duration-300 hover:scale-105" />
     <h3 className="text-lg font-semibold mb-1">Elegant Floral Dress</h3>
     <p className="text-gray-600 text-sm text-center">Flowy and comfortable, perfect for any occasion.</p>
      <div className="mt-4 w-full flex justify-between items-center">
@@ -91,8 +91,8 @@ return (
  
        {/* Item 2 */}
      <Link to="/product/2">
-  <div className="w-[280px] bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
-    <img src={top} alt="Casual Top" className="rounded-md mb-3 transition-transform duration-300 hover:scale-105 h-77" />
+  <div className="w-full min-w-0 bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+    <img src={top} alt="Casual Top" className="mb-3 h-64 w-full rounded-md object-cover transition-transform duration-300 hover:scale-105" />
     <h3 className="text-lg font-semibold mb-1">Casual Linen Top</h3>
     <p className="text-gray-600 text-sm text-center">Lightweight and breathable for everyday style.</p>
 
@@ -119,8 +119,8 @@ return (
  
        {/* Item 3 */}
          <Link to="/product/3">
-       <div className="w-[280px] bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
-         <img src={jacket} alt="Denim Jacket" className="rounded-md mb-3 transition-transform duration-300 hover:scale-105 h-80" />
+       <div className="w-full min-w-0 bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+         <img src={jacket} alt="Denim Jacket" className="mb-3 h-64 w-full rounded-md object-cover transition-transform duration-300 hover:scale-105" />
          <h3 className="text-lg font-semibold mb-1">Classic Denim Jacket</h3>
          <p className="text-gray-600 text-sm text-center">A timeless piece to elevate any outfit.</p>
         
@@ -150,8 +150,8 @@ return (
   
        
        <Link to="/product/4">
-  <div className="w-[280px] bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
-    <img src={jean1} alt="Casual Top" className="rounded-md mb-3 transition-transform duration-300 hover:scale-105 h-72" />
+  <div className="w-full min-w-0 bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
+    <img src={jean1} alt="Casual Top" className="mb-3 h-64 w-full rounded-md object-cover transition-transform duration-300 hover:scale-105" />
     <h3 className="text-lg font-semibold mb-1">Casual Linen Top</h3>
     <p className="text-gray-600 text-sm text-center">Lightweight and breathable for everyday style.</p>
 
@@ -180,14 +180,14 @@ return (
      
    </div>
 
-  <div className="w-max mx-auto mt-10">
-    <div className="w-max mx-auto">
+  <div className="mx-auto mt-10 w-full max-w-7xl px-2 sm:px-4">
+    <div className="w-full">
  
  
-     <div className="flex gap-6">
+     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
      <Link to="/product/1">
-  <div className="w-[280px] bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
-    <img src={dress1} alt="Elegant Dress" className="rounded-md mb-3 transition-transform duration-300 hover:scale-105 h-77" />
+  <div className="w-full min-w-0 bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+    <img src={dress1} alt="Elegant Dress" className="mb-3 h-64 w-full rounded-md object-cover transition-transform duration-300 hover:scale-105" />
     <h3 className="text-lg font-semibold mb-1">Elegant Floral Dress</h3>
     <p className="text-gray-600 text-sm text-center">Flowy and comfortable, perfect for any occasion.</p>
      <div className="mt-4 w-full flex justify-between items-center">
@@ -213,8 +213,8 @@ return (
  
        {/* Item 2 */}
      <Link to="/product/2">
-  <div className="w-[280px] bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
-    <img src={top1} alt="Casual Top" className="rounded-md mb-3 transition-transform duration-300 hover:scale-105 h-77" />
+  <div className="w-full min-w-0 bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+    <img src={top1} alt="Casual Top" className="mb-3 h-64 w-full rounded-md object-cover transition-transform duration-300 hover:scale-105" />
     <h3 className="text-lg font-semibold mb-1">Casual Linen Top</h3>
     <p className="text-gray-600 text-sm text-center">Lightweight and breathable for everyday style.</p>
 
@@ -241,8 +241,8 @@ return (
  
        {/* Item 3 */}
          <Link to="/product/3">
-       <div className="w-[280px] bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
-         <img src={jacket1} alt="Denim Jacket" className="rounded-md mb-3 transition-transform duration-300 hover:scale-105 h-80" />
+       <div className="w-full min-w-0 bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+         <img src={jacket1} alt="Denim Jacket" className="mb-3 h-64 w-full rounded-md object-cover transition-transform duration-300 hover:scale-105" />
          <h3 className="text-lg font-semibold mb-1">Classic Denim Jacket</h3>
          <p className="text-gray-600 text-sm text-center">A timeless piece to elevate any outfit.</p>
         
@@ -272,8 +272,8 @@ return (
   
        
        <Link to="/product/4">
-  <div className="w-[280px] bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
-    <img src={james} alt="Casual Top" className="rounded-md mb-3 transition-transform duration-300 hover:scale-105 h-72" />
+  <div className="w-full min-w-0 bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
+    <img src={james} alt="Casual Top" className="mb-3 h-64 w-full rounded-md object-cover transition-transform duration-300 hover:scale-105" />
     <h3 className="text-lg font-semibold mb-1">Casual Linen Top</h3>
     <p className="text-gray-600 text-sm text-center">Lightweight and breathable for everyday style.</p>
 
@@ -322,7 +322,7 @@ return (
       {/* Beauty Item 1 */}
   <Link to="/product/5" className="block h-full">
       <div className="h-full bg-white p-6 rounded-lg shadow-md flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
-        <img src={serum}alt="Hydrating Serum" className="rounded-md mb-4 w-64 h-64 object-cover" />
+        <img src={serum} alt="Hydrating Serum" className="mb-4 aspect-square w-full max-w-64 rounded-md object-cover" />
         <h3 className="text-xl font-semibold mb-2 text-center">Ultra-Hydrating Serum</h3>
         <p className="text-gray-600 text-center">Deeply moisturizes and plumps your skin.</p>
         <div className="mt-auto w-full flex justify-between items-center pt-4">
@@ -348,7 +348,7 @@ return (
       {/* Beauty Item 2 */}
       <Link to="/product/6" className="block h-full">
       <div className="h-full bg-white p-6 rounded-lg shadow-md flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
-        <img src={eyeshow}alt="Eyeshadow Palette" className="rounded-md mb-4 w-64 h-64 object-cover " />
+        <img src={eyeshow} alt="Eyeshadow Palette" className="mb-4 aspect-square w-full max-w-64 rounded-md object-cover" />
         <h3 className="text-xl font-semibold mb-2 text-center">Vibrant Eyeshadow Palette</h3>
         <p className="text-gray-600 text-center">Create endless eye looks with our rich pigments.</p>
         <div className="mt-auto w-full flex justify-between items-center pt-4">
@@ -375,7 +375,7 @@ return (
       {/* Beauty Item 3 */}
       <Link to="/product/7" className="block h-full">
       <div className="h-full bg-white p-6 rounded-lg shadow-md flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
-        <img src={perfome} alt="Signature Perfume" className="rounded-md mb-4 w-64 h-64 object-cover" />
+        <img src={perfome} alt="Signature Perfume" className="mb-4 aspect-square w-full max-w-64 rounded-md object-cover" />
         <h3 className="text-xl font-semibold mb-2 text-center">Signature Eau de Parfum</h3>
         <p className="text-gray-600 text-center">A unique and long-lasting fragrance signature.</p>
         <div className="mt-auto w-full flex justify-between items-center pt-4">
@@ -401,7 +401,7 @@ return (
 
       {/* Beauty Item 4 */}
       <div className="h-full bg-white p-6 rounded-lg shadow-md flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
-        <img src={cleaner} alt="Facial Cleanser" className="rounded-md mb-4 w-64 h-64 object-cover" />
+        <img src={cleaner} alt="Facial Cleanser" className="mb-4 aspect-square w-full max-w-64 rounded-md object-cover" />
         <h3 className="text-xl font-semibold mb-2 text-center">Gentle Facial Cleanser</h3>
         <p className="text-gray-600 text-center">Removes impurities while preserving skin moisture.</p>
         <div className="mt-auto flex w-full items-center justify-between pt-4">
@@ -426,7 +426,7 @@ return (
       
       {/* Accessory 1 */}
       <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center h-full transform transition duration-300 hover:scale-105 hover:shadow-xl">
-        <img src={necklace} alt="Statement Necklace" className="rounded-md mb-4 w-64 h-64 object-cover" />
+        <img src={necklace} alt="Statement Necklace" className="mb-4 aspect-square w-full max-w-64 rounded-md object-cover" />
         <h3 className="text-xl font-semibold mb-2 text-center">Bold Statement Necklace</h3>
         <p className="text-gray-600 text-center">Add a touch of glamour to any ensemble.</p>
         <div className="mt-4 flex w-full items-center justify-between">
@@ -437,7 +437,7 @@ return (
 
       {/* Accessory 2 */}
       <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center h-full transform transition duration-300 hover:scale-105 hover:shadow-xl">
-        <img src={wallet} alt="Leather Wallet" className="rounded-md mb-4 w-64 h-64 object-cover" />
+        <img src={wallet} alt="Leather Wallet" className="mb-4 aspect-square w-full max-w-64 rounded-md object-cover" />
         <h3 className="text-xl font-semibold mb-2 text-center">Premium Leather Wallet</h3>
         <p className="text-gray-600 text-center">Stylish and functional, designed for durability.</p>
         <div className="mt-4 flex w-full items-center justify-between">
@@ -448,7 +448,7 @@ return (
 
       {/* Accessory 3 */}
       <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center h-full transform transition duration-300 hover:scale-105 hover:shadow-xl">
-        <img src={scraft} alt="Silk Scarf" className="rounded-md mb-4 w-64 h-64 object-cover" />
+        <img src={scraft} alt="Silk Scarf" className="mb-4 aspect-square w-full max-w-64 rounded-md object-cover" />
         <h3 className="text-xl font-semibold mb-2 text-center">Luxurious Silk Scarf</h3>
         <p className="text-gray-600 text-center">Versatile and elegant, perfect for all seasons.</p>
         <div className="mt-4 flex w-full items-center justify-between">
@@ -459,7 +459,7 @@ return (
 
       {/* Accessory 4 */}
       <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center h-full transform transition duration-300 hover:scale-105 hover:shadow-xl">
-        <img src={watch} alt="Smart Watch" className="rounded-md mb-4 w-64 h-64 object-cover" />
+        <img src={watch} alt="Smart Watch" className="mb-4 aspect-square w-full max-w-64 rounded-md object-cover" />
         <h3 className="text-xl font-semibold mb-2 text-center">Elegant Smart Watch</h3>
         <p className="text-gray-600 text-center">Modern, stylish, and packed with features.</p>
         <div className="mt-4 flex w-full items-center justify-between">

@@ -96,21 +96,21 @@ function ProductDetails() {
 
   const [selectedImage, setSelectedImage] = useState(product?.images[0]);
 
-  if (!product) return <div className="text-center mt-10 text-red-600 text-xl">Product not found.</div>;
+  if (!product) return <div className="px-4 pt-28 text-center text-xl text-red-600">Product not found.</div>;
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row gap-10 mt-15">
+    <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 pb-12 pt-28 sm:gap-10 md:flex-row md:pt-32">
       {/* Left section: Main image + thumbnails */}
       <div className="flex-1">
-   <img src={selectedImage} alt="Main" className="w-full max-w-md h-[350px] object-cover rounded-lg shadow-md mx-auto ml-0"/>
-        <div className="flex gap-2 mt-4">
+   <img src={selectedImage} alt={product.name} className="mx-auto h-64 w-full max-w-md rounded-lg object-cover shadow-md sm:h-[350px]"/>
+        <div className="mt-4 grid grid-cols-4 gap-2 sm:gap-3">
           {product.images.map((img, idx) => (
             <img
               key={idx}
               src={img}
               alt={`Thumbnail ${idx}`}
               onClick={() => setSelectedImage(img)}
-              className={`w-27 h-25 object-cover rounded-md border cursor-pointer transition-transform duration-200 hover:scale-105 ${
+              className={`aspect-square w-full cursor-pointer rounded-md border object-cover transition-transform duration-200 hover:scale-105 ${
                 selectedImage === img ? 'border-black' : 'border-gray-300'
               }`}
             />
@@ -119,8 +119,8 @@ function ProductDetails() {
       </div>
 
       {/* Right section: Product info */}
-      <div className="flex-1 mr-40">
-        <h2 className="text-2xl font-bold mb-2">{product.name}</h2>
+      <div className="min-w-0 flex-1 md:pt-2">
+        <h2 className="mb-2 text-2xl font-bold sm:text-3xl">{product.name}</h2>
         <p className="text-xl font-semibold mb-4">${product.price.toFixed(2)}</p>
 
         <label className="block mb-1 text-sm font-medium">Select Size</label>

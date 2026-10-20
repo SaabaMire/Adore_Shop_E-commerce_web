@@ -29,7 +29,7 @@ export const About = () => {
             <img
               src={store}
               alt="A woman choosing clothes in a store"
-              className="rounded-lg shadow-lg h-90 w-200"
+              className="mx-auto h-72 w-full max-w-2xl rounded-lg object-cover shadow-lg sm:h-96"
             />
           </div>
         </div>

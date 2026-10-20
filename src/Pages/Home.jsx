@@ -37,7 +37,7 @@ const images = [
 const HeroSection = () => {
   
   return (
-    <div className="w-full h-[370px]">
+    <div className="h-[240px] w-full sm:h-[320px] md:h-[370px]">
       <Swiper
         modules={[Autoplay, Pagination]}
         autoplay={{ delay: 1000 }}
@@ -74,12 +74,12 @@ const Home = () => {
     navigate('/shop'); // navigate to shop page
   };
   return (
-    <div className="bg-pink-50 min-h-screen pt-[70px]"> {/* This pushes everything below header */}
+    <div className="min-h-screen overflow-x-hidden bg-pink-50 pt-20">
       
       {/* Welcome Section */}
-      <section className="text-center bg-pink-100 py-10">
-        <h1 className="text-3xl font-bold font-serif text-pink-900 mb-4">Welcome to ADORA Women's Place</h1>
-        <p className="text-lg text-gray-700 mb-3">Discover the latest trends in fashion & beauty</p>
+      <section className="bg-pink-100 px-4 py-8 text-center sm:py-10">
+        <h1 className="mb-4 font-serif text-2xl font-bold text-pink-900 sm:text-3xl">Welcome to ADORA Women&apos;s Place</h1>
+        <p className="mb-3 text-base text-gray-700 sm:text-lg">Discover the latest trends in fashion &amp; beauty</p>
         
       {/* Image Carousel */}
       <HeroSection />
@@ -91,14 +91,14 @@ const Home = () => {
       
       {/* Categories */}
      
-    <section id="categories-section" className="py-14 px-4 ">
-  <h2 className="text-4xl font-bold text-gray-800 mb-5 text-center ">Shop by Category</h2>
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+    <section id="categories-section" className="px-4 py-10 sm:py-14">
+  <h2 className="mb-5 text-center text-3xl font-bold text-gray-800 sm:text-4xl">Shop by Category</h2>
+  <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
     {/* Clothing Section */}
-    <div className="bg-white p-3 shadow-xl rounded-lg text-center flex flex-col items-center justify-between min-h-[550px] w-full">
+    <div className="flex min-h-[460px] w-full flex-col items-center justify-between rounded-lg bg-white p-3 text-center shadow-xl sm:min-h-[550px]">
       <h3 className="text-3xl font-bold text-pink-700 mb-4">Clothing</h3>
 
-      <div className="w-full h-72 overflow-hidden rounded-md shadow-md mb-4 transition-transform duration-300 hover:scale-105">
+      <div className="mb-4 h-56 w-full overflow-hidden rounded-md shadow-md transition-transform duration-300 hover:scale-105 sm:h-72">
         <img
           src={C_Clothes}
           alt="Shop Clothing"
@@ -119,10 +119,10 @@ const Home = () => {
     </div>
 
     {/* Accessories Section */}
-    <div className="bg-white p-3 shadow-xl rounded-lg text-center flex flex-col items-center justify-between min-h-[550px] w-full">
+    <div className="flex min-h-[460px] w-full flex-col items-center justify-between rounded-lg bg-white p-3 text-center shadow-xl sm:min-h-[550px]">
       <h3 className="text-3xl font-bold text-purple-700 mb-4">Accessories</h3>
 
-      <div className="w-full h-72 overflow-hidden rounded-md shadow-md mb-4 transition-transform duration-300 hover:scale-105">
+      <div className="mb-4 h-56 w-full overflow-hidden rounded-md shadow-md transition-transform duration-300 hover:scale-105 sm:h-72">
         <img
           src={bag}
           alt="Accessories Category"
@@ -143,10 +143,10 @@ const Home = () => {
     </div>
 
     {/* Beauty Section */}
-    <div className="bg-white p-3 shadow-xl rounded-lg text-center flex flex-col items-center justify-between min-h-[550px] w-full">
+    <div className="flex min-h-[460px] w-full flex-col items-center justify-between rounded-lg bg-white p-3 text-center shadow-xl sm:min-h-[550px]">
       <h3 className="text-3xl font-bold text-teal-700 mb-4">Beauty</h3>
 
-      <div className="w-full h-72 overflow-hidden rounded-md shadow-md mb-4 transition-transform duration-300 hover:scale-105">
+      <div className="mb-4 h-56 w-full overflow-hidden rounded-md shadow-md transition-transform duration-300 hover:scale-105 sm:h-72">
         <img
           src={beauty}
           alt="Beauty Category"
@@ -170,38 +170,38 @@ const Home = () => {
 
 
       {/* Placeholder sections with more content for scrolling */}
-      <section id="clothing-section-detail" className="bg-pink-100 py-6 px-2 mb-12 w-full overflow-hidden ">
-  <div className="w-max mx-auto">
-    <h2 className="text-3xl font-bold text-pink-800 mb-4 text-center">Our Latest Clothing Collection</h2>
+    <section id="clothing-section-detail" className="mb-12 w-full scroll-mt-24 overflow-hidden bg-pink-100 px-4 py-6">
+  <div className="mx-auto w-full max-w-7xl">
+    <h2 className="mb-4 text-center text-2xl font-bold text-pink-800 sm:text-3xl">Our Latest Clothing Collection</h2>
 
-    <div className="flex gap-6">
+    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
       {/* Item 1 */}
-      <div className="w-[280px] bg-white p-4 rounded-lg shadow-md flex flex-col items-center ">
-        <img src={dress} alt="Elegant Dress" className="rounded-md mb-3 transition-transform duration-300 hover:scale-105" />
+      <div className="flex min-w-0 flex-col items-center rounded-lg bg-white p-4 shadow-md">
+        <img src={dress} alt="Elegant Dress" className="mb-3 h-64 w-full rounded-md object-cover transition-transform duration-300 hover:scale-105" />
         <h3 className="text-lg font-semibold mb-1">Elegant Floral Dress</h3>
         <p className="text-gray-600 text-sm text-center">Flowy and comfortable, perfect for any occasion.</p>
         <span className="mt-2 text-base font-bold text-pink-600">$79.99</span>
       </div>
 
       {/* Item 2 */}
-      <div className="w-[280px] bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
-        <img src={top}alt="Casual Top" className="rounded-md mb-3 transition-transform duration-300 hover:scale-105" />
+      <div className="flex min-w-0 flex-col items-center rounded-lg bg-white p-4 shadow-md">
+        <img src={top} alt="Casual Top" className="mb-3 h-64 w-full rounded-md object-cover transition-transform duration-300 hover:scale-105" />
         <h3 className="text-lg font-semibold mb-1">Casual Linen Top</h3>
         <p className="text-gray-600 text-sm text-center">Lightweight and breathable for everyday style.</p>
         <span className="mt-2 text-base font-bold text-pink-600">$34.50</span>
       </div>
 
       {/* Item 3 */}
-      <div className="w-[280px] bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
-        <img src={jacket} alt="Denim Jacket" className="rounded-md mb-3 transition-transform duration-300 hover:scale-105" />
+      <div className="flex min-w-0 flex-col items-center rounded-lg bg-white p-4 shadow-md">
+        <img src={jacket} alt="Denim Jacket" className="mb-3 h-64 w-full rounded-md object-cover transition-transform duration-300 hover:scale-105" />
         <h3 className="text-lg font-semibold mb-1">Classic Denim Jacket</h3>
         <p className="text-gray-600 text-sm text-center">A timeless piece to elevate any outfit.</p>
         <span className="mt-2 text-base font-bold text-pink-600">$89.00</span>
       </div>
 
       {/* Item 4 */}
-      <div className="w-[280px] bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
-        <img src={james} alt="Casual Top" className="rounded-md mb-3 transition-transform duration-300 hover:scale-105" />
+      <div className="flex min-w-0 flex-col items-center rounded-lg bg-white p-4 shadow-md">
+        <img src={james} alt="Casual Top" className="mb-3 h-64 w-full rounded-md object-cover transition-transform duration-300 hover:scale-105" />
         <h3 className="text-lg font-semibold mb-1">Casual Linen Top</h3>
         <p className="text-gray-600 text-sm text-center">Lightweight and breathable for everyday style.</p>
         <span className="mt-2 text-base font-bold text-pink-600">$34.50</span>
@@ -210,14 +210,14 @@ const Home = () => {
   </div>
 </section>
 
-<section id="accessories-section-detail" className="bg-purple-100 py-16 px-4 mb-12">
+<section id="accessories-section-detail" className="mb-12 scroll-mt-24 bg-purple-100 px-4 py-12 sm:py-16">
   <div className="max-w-7xl mx-auto">
     <h2 className="text-4xl font-bold text-purple-800 mb-10 text-center">Must-Have Accessories</h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 sm:gap-8">
       
       {/* Accessory 1 */}
       <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center h-full transform transition duration-300 hover:scale-105 hover:shadow-xl">
-        <img src={necklace} alt="Statement Necklace" className="rounded-md mb-4 w-64 h-64 object-cover" />
+        <img src={necklace} alt="Statement Necklace" className="mb-4 aspect-square w-full max-w-64 rounded-md object-cover" />
         <h3 className="text-xl font-semibold mb-2 text-center">Bold Statement Necklace</h3>
         <p className="text-gray-600 text-center">Add a touch of glamour to any ensemble.</p>
         <span className="mt-4 text-lg font-bold text-purple-600">$45.00</span>
@@ -225,7 +225,7 @@ const Home = () => {
 
       {/* Accessory 2 */}
       <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center h-full transform transition duration-300 hover:scale-105 hover:shadow-xl">
-        <img src={wallet} alt="Leather Wallet" className="rounded-md mb-4 w-64 h-64 object-cover" />
+        <img src={wallet} alt="Leather Wallet" className="mb-4 aspect-square w-full max-w-64 rounded-md object-cover" />
         <h3 className="text-xl font-semibold mb-2 text-center">Premium Leather Wallet</h3>
         <p className="text-gray-600 text-center">Stylish and functional, designed for durability.</p>
         <span className="mt-4 text-lg font-bold text-purple-600">$65.00</span>
@@ -233,7 +233,7 @@ const Home = () => {
 
       {/* Accessory 3 */}
       <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center h-full transform transition duration-300 hover:scale-105 hover:shadow-xl">
-        <img src={scraft} alt="Silk Scarf" className="rounded-md mb-4 w-64 h-64 object-cover" />
+        <img src={scraft} alt="Silk Scarf" className="mb-4 aspect-square w-full max-w-64 rounded-md object-cover" />
         <h3 className="text-xl font-semibold mb-2 text-center">Luxurious Silk Scarf</h3>
         <p className="text-gray-600 text-center">Versatile and elegant, perfect for all seasons.</p>
         <span className="mt-4 text-lg font-bold text-purple-600">$30.00</span>
@@ -241,7 +241,7 @@ const Home = () => {
 
       {/* Accessory 4 */}
       <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center h-full transform transition duration-300 hover:scale-105 hover:shadow-xl">
-        <img src={watch} alt="Smart Watch" className="rounded-md mb-4 w-64 h-64 object-cover" />
+        <img src={watch} alt="Smart Watch" className="mb-4 aspect-square w-full max-w-64 rounded-md object-cover" />
         <h3 className="text-xl font-semibold mb-2 text-center">Elegant Smart Watch</h3>
         <p className="text-gray-600 text-center">Modern, stylish, and packed with features.</p>
         <span className="mt-4 text-lg font-bold text-purple-600">$120.00</span>
@@ -252,14 +252,14 @@ const Home = () => {
 </section>
 
 
-<section id="beauty-section-detail" className="bg-teal-100 py-16 px-4 mb-12">
+<section id="beauty-section-detail" className="mb-12 scroll-mt-24 bg-teal-100 px-4 py-12 sm:py-16">
   <div className="max-w-7xl mx-auto">
     <h2 className="text-4xl font-bold text-teal-800 mb-10 text-center">Your Beauty Essentials</h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 sm:gap-8">
       
       {/* Beauty Item 1 */}
       <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
-        <img src={serum}alt="Hydrating Serum" className="rounded-md mb-4 w-64 h-64 object-cover" />
+        <img src={serum} alt="Hydrating Serum" className="mb-4 aspect-square w-full max-w-64 rounded-md object-cover" />
         <h3 className="text-xl font-semibold mb-2 text-center">Ultra-Hydrating Serum</h3>
         <p className="text-gray-600 text-center">Deeply moisturizes and plumps your skin.</p>
         <span className="mt-4 text-lg font-bold text-teal-600">$55.00</span>
@@ -267,7 +267,7 @@ const Home = () => {
 
       {/* Beauty Item 2 */}
       <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
-        <img src={eyeshow}alt="Eyeshadow Palette" className="rounded-md mb-4 w-64 h-64 object-cover" />
+        <img src={eyeshow} alt="Eyeshadow Palette" className="mb-4 aspect-square w-full max-w-64 rounded-md object-cover" />
         <h3 className="text-xl font-semibold mb-2 text-center">Vibrant Eyeshadow Palette</h3>
         <p className="text-gray-600 text-center">Create endless eye looks with our rich pigments.</p>
         <span className="mt-4 text-lg font-bold text-teal-600">$40.00</span>
@@ -275,7 +275,7 @@ const Home = () => {
 
       {/* Beauty Item 3 */}
       <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
-        <img src={perfome} alt="Signature Perfume" className="rounded-md mb-4 w-64 h-64 object-cover" />
+        <img src={perfome} alt="Signature Perfume" className="mb-4 aspect-square w-full max-w-64 rounded-md object-cover" />
         <h3 className="text-xl font-semibold mb-2 text-center">Signature Eau de Parfum</h3>
         <p className="text-gray-600 text-center">A unique and long-lasting fragrance.</p>
         <span className="mt-4 text-lg font-bold text-teal-600">$99.00</span>
@@ -283,7 +283,7 @@ const Home = () => {
 
       {/* Beauty Item 4 */}
       <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
-        <img src={cleaner} alt="Facial Cleanser" className="rounded-md mb-4 w-64 h-64 object-cover" />
+        <img src={cleaner} alt="Facial Cleanser" className="mb-4 aspect-square w-full max-w-64 rounded-md object-cover" />
         <h3 className="text-xl font-semibold mb-2 text-center">Gentle Facial Cleanser</h3>
         <p className="text-gray-600 text-center">Removes impurities while preserving skin moisture.</p>
         <span className="mt-4 text-lg font-bold text-teal-600">$25.00</span>

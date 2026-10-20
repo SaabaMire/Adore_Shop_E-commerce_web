@@ -29,7 +29,7 @@ function Cart() {
   }
 
   return (
-    <div className="mx-auto max-w-5xl px-4 pb-16 pt-32 sm:px-6">
+    <div className="mx-auto max-w-5xl px-4 pb-16 pt-28 sm:px-6 sm:pt-32">
       <h1 className="mb-2 text-3xl font-bold text-gray-900">Your Cart</h1>
       <p className="mb-8 text-gray-600">Review your items, then try the demo checkout.</p>
 
@@ -45,7 +45,7 @@ function Cart() {
             <ul className="divide-y divide-gray-200">
               {cart.map((item) => (
                 <li key={item.id} className="flex items-center justify-between gap-4 py-4">
-                  <div>
+                  <div className="min-w-0 break-words">
                     <h3 className="font-semibold text-gray-900">{item.name}</h3>
                     <p className="mt-1 text-sm text-gray-600">${Number(item.price).toFixed(2)} × {item.quantity}</p>
                   </div>
